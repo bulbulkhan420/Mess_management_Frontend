@@ -1,0 +1,43 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.dis{
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.dismain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.dis input,button{
+    width: 20%;
+    line-height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+button{
+    background-color: rgb(7,7,159);
+    text-align: center;
+    color: aliceblue;
+}
+
+@media only screen and (max-width:700px){
+    .dis input,button{
+        width: 50%;
+        line-height: 30px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+}

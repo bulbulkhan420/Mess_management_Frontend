@@ -1,0 +1,82 @@
+*{     /*erall css effect */
+    margin:0;
+    padding:0;
+}
+.container{
+    max-width:1000px;
+    background-color: #E4f9f5;
+    padding:20px;
+    margin:0 auto;    /* top and bottom a kono margin thakbe na and left right a equal margin thakbe*/
+}
+.profile-image{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border:3px solid black;
+    float:left;
+}
+.header-bio{
+    float:left;
+    padding:30px;
+}
+h1,h2,h3,h4,h5,h6{
+    color:#11999e;
+}
+.Header-contact{
+    float:right;
+    padding:30px;
+}
+.Header-contact a{
+    text-decoration: none;
+    color:#11999e;
+    font-weight: bold;
+}
+.header-contact a:hover{
+    text-decoration:underline;
+    color:tomato;
+}
+.clear-div{
+    clear: both;
+}
+hr{
+    border:solid black 3px;
+    width: 100%;
+    margin:2px auto;
+    border-bottom: 0px;  
+}
+.link-section{
+    width:100%;
+    background-color: grey;
+    height:45px;
+    float:left;
+    margin:2px auto;
+    padding-bottom: 10px;
+}
+.header_button{
+    color:white;
+    text-align: center; 
+}
+button{
+    width:100px;
+    height:40px;
+    background-color: aqua;
+    color:tomato;
+    border-radius: 20%;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+button:hover{
+    background-color:green;
+    color:white;
+}
+.btn{
+    margin:auto;
+    margin-right:50px;
+}
+.academic_info{
+    background-color: green;
+    width:100%;
+    height:100px;
+    margin:5px 0px;
+}

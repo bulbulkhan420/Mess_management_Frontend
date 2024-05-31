@@ -1,0 +1,231 @@
+html{
+    scroll-behavior: smooth;
+    font-family: "Lucida Sans", sans-serif;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.container{
+    max-width: 1000px;
+    margin:auto;  
+     background-color: aqua;  
+     position: relative; 
+}
+.header{
+    width: 100%;
+    text-align: center;
+    color:white;
+}
+.heading-section{
+  
+    width:100%;
+    height:500px;
+    color:white;
+    background-image: url("images/banner-image.jpg");
+    background-position: center;
+    background-attachment: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+   
+}
+.heading-btn{
+    width: 150px;
+    height: 30px;
+    border:none;
+    border-radius: 10px;
+    background: grey;
+    color:white;
+    font-size: 1.2rem;
+    top: 465px;
+    right: 10px; 
+    transition: 0.4s;
+    position: absolute;
+    
+}
+.heading-btn:hover{
+    transform: scale(1.1);
+}
+.profile-photo{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin:10px 10px;
+    float:left;
+ }
+ .profile{
+    width: 100%;
+    background-color: green;
+    margin: 10px auto;
+    
+ }
+.profile_info{
+    float:left;
+    margin:15px auto;
+}
+.p-btn{
+    float:right;
+}
+.profile-btn{
+    width: 150px;
+    height: 30px;
+    border:none;
+    border-radius: 10px;
+    background: grey;
+    color:white;
+    font-size: 1.2rem;
+    position: absolute;
+    transition: 0.4s;
+    top: 580px;
+    right: 10px;
+    
+} 
+.profile-btn:hover{
+    transform: scale(1.2);
+}
+.clear{
+    clear:both;
+}
+.main-section-link{
+    text-transform: uppercase;
+}
+.main-link{
+    width:100%;
+    background-color: lightgray;
+    float:left;
+    
+}
+.main-link a {
+    text-decoration: none;
+    line-height: 3rem;
+    color:white;
+    text-align: center;
+}
+.main-link-ok{
+    width:100%;
+    height: 40px;
+    float: left;
+    background-color: lightslategrey;
+    transition: 0.4s;
+}
+.main-link-ok:hover{
+    background-color:transparent;
+    box-shadow:black 2px 5px;
+}
+.notice-section{
+    width: 100%;
+    float:right;
+    height:320px;
+    background-color: green;
+}
+.notice-heading{
+    text-align: center;
+    color:black;
+}
+
+
+#single-room,#double-room,#triple-room,#room-facility,#contact,#others,#seat-range,#condition{
+    width:100%;
+    height:50px;
+    background:lightcoral;
+    margin-top: 10px;
+}
+
+/* footer start */
+footer{
+    padding:1%;
+    color:white;
+    background:#060930;
+}
+footer p{
+    line-height: 32px;
+    font-size: 0.8rem;
+    text-align:center;
+}
+.social-menus{
+    text-align: center;
+}
+.icon-style{
+    color:white;
+    width:32px;
+    height: 32px;
+    line-height:32px;
+    border-radius: 50%;
+    border:1px solid white;
+    margin:0 10px;
+    transition: 0.4s;
+    text-align: center;
+}
+.icon-style:hover{
+    background-color: grey;
+    transform: scale(1.2);
+}
+   /* footer end */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+   /* responsive  */
+   /* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .heading-btn{
+        
+        top: 475px;
+        left: 20px; 
+    }
+    .profile-btn{
+        top: 475px;
+        right: 10px;
+        
+    }
+    
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+   
+  }
