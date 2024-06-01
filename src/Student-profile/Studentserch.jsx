@@ -3,7 +3,7 @@ import React from 'react'
 export default function Studentserch() {
   return (
     <div>
-      hiii pola
+      hiii pola ki koros
     </div>
   )
 }
