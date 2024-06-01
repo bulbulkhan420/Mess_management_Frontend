@@ -49,11 +49,10 @@ export default function App() {
     <Route path='/ownerprofile/:email' element={<Ownermain/>} ></Route>
     <Route path='/otpmess/:email' element={<Otpmess/>} ></Route>
   </Routes>
+  <Registrationroute/>
   </BrowserRouter>
   */}
-
-  <Registrationroute/>
- 
+  hiii allll
   </div>
   )
 }
