@@ -77,7 +77,7 @@ useEffect(()=>{
              <h1>Parmanent address</h1>
        </section>
         <section className="academic_info">
-            <h1>Immargency Contact</h1>
+            <h1>Immargency Contact of </h1>
         </section>
     </main>
      <footer>
