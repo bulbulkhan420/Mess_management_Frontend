@@ -15,7 +15,7 @@ let upload=()=>{
     let formdata=new FormData();
   formdata.append('bul',img);
   formdata.append('email',email);
-  axios.post("http://localhost:3001/uploadpic",formdata)
+  axios.post("https://mess-management-backend-1.onrender.com/uploadpic",formdata)
   .then((res)=>{
     if(res.data.ok){
       alert("successfull");
@@ -29,7 +29,7 @@ let upload=()=>{
   
 }
 useEffect(()=>{
-  axios.post("http://localhost:3001/studentprofile",{
+  axios.post("https://mess-management-backend-1.onrender.com/studentprofile",{
     email:email
   })
   .then((res)=>{
@@ -44,7 +44,7 @@ useEffect(()=>{
     <header>
        <Studentheader/>
         
-          <img className="profile-image" src={"http://localhost:3001/"+info.image}></img>
+          <img className="profile-image" src={"https://mess-management-backend-1.onrender.com/"+info.image}></img>
          <div className="poo">
          <div className="header-bio"><h2>{info.fname+" "+info.lname}</h2>
         <h3>Student of Rajshahi University</h3>

@@ -13,7 +13,7 @@ export default function Forgetemail() {
   let findmail=(e)=>{
     e.preventDefault();
     if(id=="student"){
-      axios.post("http://localhost:3001/forgetmail",{
+      axios.post("https://mess-management-backend-1.onrender.com/forgetmail",{
         email:email
       })
       .then((res)=>{
@@ -27,7 +27,7 @@ export default function Forgetemail() {
     }
     
     else{
-      axios.post("http://localhost:3001/forgetmailmess",{
+      axios.post("https://mess-management-backend-1.onrender.com/forgetmailmess",{
         email:email
       })
       .then((res)=>{

@@ -40,7 +40,7 @@ export default function Singupmess() {
   let subfrm=(e)=>{
     e.preventDefault();
     if(password==cpassword){
-       axios.post("http://localhost:3001/ownersignup",{
+       axios.post("https://mess-management-backend-1.onrender.com/ownersignup",{
         location,fname,lname,email,phone,password
        })
        .then((res)=>{

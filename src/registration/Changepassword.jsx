@@ -19,7 +19,7 @@ export default function Changepassword() {
   let changepass=(e)=>{
    e.preventDefault();
    if(password==cpassword){
-    axios.patch("http://localhost:3001/updatepass",{
+    axios.patch("https://mess-management-backend-1.onrender.com/updatepass",{
       email:email,
       password:password
     })

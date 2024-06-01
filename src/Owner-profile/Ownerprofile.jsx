@@ -7,7 +7,7 @@ export default function Ownerprofile(props) {
    let [infos,sinfos]=useState({});
    let [state,sstate]=useState(0);
    useEffect(()=>{
-    axios.post("http://localhost:3001/ownerprofile",{
+    axios.post("https://mess-management-backend-1.onrender.com/ownerprofile",{
       email:email
     })
     .then((res)=>{
@@ -24,7 +24,7 @@ export default function Ownerprofile(props) {
     let formdata=new FormData();
     formdata.append('bul',img);
     formdata.append('email',email);
-    axios.post("http://localhost:3001/uploadpicowner",formdata)
+    axios.post("https://mess-management-backend-1.onrender.com/uploadpicowner",formdata)
     .then((res)=>{
       if(res.data.ok){
         alert("succesfull");
@@ -40,7 +40,7 @@ export default function Ownerprofile(props) {
   return (
     <div>
       <div className="rooti">
-      <img src={"http://localhost:3001/"+infos.image} alt="" className='img' />
+      <img src={"https://mess-management-backend-1.onrender.com/"+infos.image} alt="" className='img' />
       <p>Upload Profile picture</p>
       <input type="file" onChange={setimg}/>
       <button onClick={upload}>Upload</button>

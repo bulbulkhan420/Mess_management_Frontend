@@ -35,7 +35,7 @@ export default function Singupstudent() {
   let submitform=(e)=>{
     e.preventDefault();
     if(password==cpassword){
-    axios.post("http://localhost:3001/studentsignup",{
+    axios.post("https://mess-management-backend-1.onrender.com/studentsignup",{
       fname,lname,email,phone,password
     })
     .then((res)=>{

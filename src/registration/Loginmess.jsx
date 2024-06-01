@@ -22,7 +22,7 @@ export default function Loginmess() {
   let check= (e)=>{
    e.preventDefault();
    
-   axios.post("http://localhost:3001/loginmess",{
+   axios.post("https://mess-management-backend-1.onrender.com/loginmess",{
      email:email,
      password:password
    })

@@ -12,7 +12,7 @@ export default function Otp() {
   let {email}=useParams();
   let verifyemail=(e)=>{
     e.preventDefault();
-    axios.post("http://localhost:3001/otpverify",{
+    axios.post("https://mess-management-backend-1.onrender.com/otpverify",{
       email:email,
       otp:otp
     })

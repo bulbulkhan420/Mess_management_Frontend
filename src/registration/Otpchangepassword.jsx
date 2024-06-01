@@ -12,7 +12,7 @@ export default function Otpchangepassword() {
   }
   let sendform=(e)=>{
       e.preventDefault();
-      axios.post("http://localhost:3001/otppasswordchange",{
+      axios.post("https://mess-management-backend-1.onrender.com/otppasswordchange",{
         email:email,
         otp:otp
       })
