@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react'
+import {useRef,useState } from "react";
+
 import "./css/main.css"
 import { FaAlignJustify } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
@@ -21,13 +22,13 @@ export default function Homehead() {
       <FaAlignJustify onClick={toggle} className='bar'/>
         <div className='item'><NavLink to='/login' style={{color:'aliceblue',textDecoration:'none'}}>Student Login</NavLink></div>
         <div className='item'><NavLink to='/loginmess' style={{color:'aliceblue',textDecoration:'none'}}>Owners Login</NavLink></div>
-        <div className='item'>Contract</div>
+        <div className='item'>Contract_info</div>
         
       </div>
       <div className="sidebar" ref={sb}>
         <div ><NavLink to='/login' style={{color:'aliceblue',textDecoration:'none'}}>Student Login</NavLink></div>
         <div ><NavLink to='/loginmess' style={{color:'aliceblue',textDecoration:'none'}}>Owners Login</NavLink></div>
-        <div style={{color:'aliceblue'}}>Contract</div>
+        <div style={{color:'aliceblue'}}>Contract_info</div>
         </div>
     </div>
   )
