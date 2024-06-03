@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./CSS/login.css"
 import { NavLink, useNavigate } from 'react-router-dom'
 import axios from 'axios';
-
+import { url } from '../Url';
 
 export default function Loginmess() {
   let [email,semail]=useState("");
@@ -22,7 +22,7 @@ export default function Loginmess() {
   let check= (e)=>{
    e.preventDefault();
    
-   axios.post("https://mess-management-backend-1.onrender.com/loginmess",{
+   axios.post(`${url}/loginmess`,{
      email:email,
      password:password
    })
@@ -30,6 +30,7 @@ export default function Loginmess() {
      
      if(res.data.check){
        let path="/ownerprofile/"+email;
+       localStorage.setItem("tokenowner",res.data.token);
        navigate(path);
       }
       else{

@@ -7,7 +7,7 @@ export default function Ownermain() {
 
   return (
     <div>
-    <Ownerprofile email={email}/>
+    
     
     </div>
   )

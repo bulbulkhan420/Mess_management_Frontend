@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./CSS/otp.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { url } from '../Url';
 export default function Changepasswordmess() {
   let [password,spassword]=useState("");
   let [cpassword,scpassword]=useState("");
@@ -19,7 +20,7 @@ export default function Changepasswordmess() {
   let changepass=(e)=>{
    e.preventDefault();
    if(password==cpassword){
-    axios.patch("https://mess-management-backend-1.onrender.com/updatepassmess",{
+    axios.patch(`${url}/updatepassmess`,{
       email:email,
       password:password
     })

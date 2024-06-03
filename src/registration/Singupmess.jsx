@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./CSS/signupmess.css"
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import { url } from '../Url';
 export default function Singupmess() {
   let [location,slocation]=useState("");
   let sel=(e)=>{
@@ -40,7 +40,7 @@ export default function Singupmess() {
   let subfrm=(e)=>{
     e.preventDefault();
     if(password==cpassword){
-       axios.post("https://mess-management-backend-1.onrender.com/ownersignup",{
+       axios.post(`${url}/ownersignup`,{
         location,fname,lname,email,phone,password
        })
        .then((res)=>{

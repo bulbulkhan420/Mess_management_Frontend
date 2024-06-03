@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./CSS/otp.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { url } from '../Url';
 export default function Otpchangepasswordmess() {
   let [otp,sotp]=useState("");
   let {email}=useParams();
@@ -12,7 +13,7 @@ export default function Otpchangepasswordmess() {
   }
   let sendform=(e)=>{
       e.preventDefault();
-      axios.post("https://mess-management-backend-1.onrender.com/otppasswordchangemess",{
+      axios.post(`${url}/otppasswordchangemess`,{
         email:email,
         otp:otp
       })

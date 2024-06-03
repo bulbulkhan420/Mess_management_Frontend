@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./CSS/signupstudent.css"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { url } from '../Url';
 export default function Singupstudent() {
   let [status,sstatus]=useState("");
   let [fname,sfname]=useState("");
@@ -35,7 +36,7 @@ export default function Singupstudent() {
   let submitform=(e)=>{
     e.preventDefault();
     if(password==cpassword){
-    axios.post("https://mess-management-backend-1.onrender.com/studentsignup",{
+    axios.post(`${url}/studentsignup`,{
       fname,lname,email,phone,password
     })
     .then((res)=>{

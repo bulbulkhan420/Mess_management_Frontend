@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./CSS/otp.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-
+import { url } from '../Url';
 export default function Otpmess() {
   let [otp,sotp]=useState("");
   let navigate=useNavigate();
@@ -12,7 +12,7 @@ export default function Otpmess() {
   let {email}=useParams();
   let verifyemail=(e)=>{
     e.preventDefault();
-    axios.post("https://mess-management-backend-1.onrender.com/otpmessverify",{
+    axios.post(`${url}/otpmessverify`,{
       email:email,
       otp:otp
     })

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./CSS/login.css"
-
+import { url } from '../Url';
 import { NavLink, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 export default function Login() {
@@ -20,14 +20,15 @@ export default function Login() {
    let check= (e)=>{
     e.preventDefault();
     
-    axios.post("https://mess-management-backend-1.onrender.com/login",{
+    axios.post(`${url}/login`,{
       email:email,
       password:password
     })
     .then((res)=>{
-      
+      console.log(res.data)
       if(res.data.check){
         let path="/studentprofile/"+email;
+        localStorage.setItem("token",res.data.token);
         navigate(path);
        }
        else{

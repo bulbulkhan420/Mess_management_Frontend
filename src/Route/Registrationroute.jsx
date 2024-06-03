@@ -15,6 +15,8 @@ import Otpmess from '../registration/Otpmess.jsx'
 import Otpchangepasswordmess from '../registration/Otpchangepasswordmess.jsx'
 import Changepasswordmess from '../registration/Changepasswordmess.jsx'
 import Studentmain from '../Student-profile/Studentmain.jsx'
+import Studentpro from '../Student-profile/Studentpro.jsx'
+import Ownerprofile from '../Owner-profile/Ownerprofile.jsx'
 
 
 export default function Registrationroute() {
@@ -29,10 +31,10 @@ export default function Registrationroute() {
     <Forgetemail/>
   <Changepassword/>
   */}
-
+  
   <BrowserRouter>
   <Routes>
-  <Route path='/studentprofile/:email' element={<Studentmain/>} ></Route>
+  <Route path='/studentprofile/:email' element={<Studentpro/>} ></Route>
     <Route path="/" element={<Home/>}></Route>
     <Route path='/login' element={<Login/>}></Route>
     <Route path='/loginmess' element={<Loginmess/>}></Route>
@@ -47,7 +49,7 @@ export default function Registrationroute() {
     
     <Route path='/changepassword/:email' element={<Changepassword/>} ></Route>
     <Route path='/changepasswordmess/:email' element={<Changepasswordmess/>} ></Route>
-    <Route path='/ownerprofile/:email' element={<Ownermain/>} ></Route>
+    <Route path='/ownerprofile/:email' element={<Ownerprofile/>} ></Route>
     <Route path='/otpmess/:email' element={<Otpmess/>} ></Route>
   </Routes>
   </BrowserRouter>

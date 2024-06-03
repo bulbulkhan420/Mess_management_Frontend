@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./CSS/otp.css"
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import { url } from '../Url';
 export default function Forgetemail() {
   let [email,semail]=useState("");
   let navigate=useNavigate();
@@ -27,7 +28,7 @@ export default function Forgetemail() {
     }
     
     else{
-      axios.post("https://mess-management-backend-1.onrender.com/forgetmailmess",{
+      axios.post(`${url}/forgetmailmess`,{
         email:email
       })
       .then((res)=>{
