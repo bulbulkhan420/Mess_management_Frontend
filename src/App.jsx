@@ -15,6 +15,8 @@ import Otpmess from './registration/Otpmess.jsx'
 import Otpchangepasswordmess from './registration/Otpchangepasswordmess.jsx'
 import Changepasswordmess from './registration/Changepasswordmess.jsx'
 import Registrationroute from './Route/Registrationroute.jsx'
+import MassProfilePage from './Mess_Profile_pages/Mass_profile_pages/MassProfilePage.jsx'
+import Header from './Mess_Profile_pages/Header.jsx'
 
 
 export default function App() {
@@ -52,7 +54,9 @@ export default function App() {
   
   </BrowserRouter>
   */}
-     <Registrationroute/>
+     {/* <Registrationroute/> */}
+     <MassProfilePage />
+     {/* <Header /> */}
   </div>
   )
 }
