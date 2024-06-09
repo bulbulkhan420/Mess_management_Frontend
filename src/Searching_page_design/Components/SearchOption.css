@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h1,h2,h3 {
+  text-align: center;
+}
+/* main section start */
+form {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search{
+    margin:10px auto;
+}
+
+select {
+    width: 30%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    
+    margin:20px ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* display section start */
+.display_section{
+   width:100%;
+   height:500px;
+   color:white;
+    background-image: url("C:\Users\HP\Desktop\Mess_management_Frontend\src\Mess_Profile_pages\images\banner-image.jpg");
+    background-position: center;
+    background-attachment:scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+/* display section end */
+/* responsive */
+[class*="col-"]{
+    float: left;
+    padding:5px;
+ }
+ row::after{
+    content: "";
+    clear: both;
+    display:table;
+ }
+ select{
+    width: 100%;
+}
+select option{
+    text-align: center;  
+
+}
+
+   /* For mobile phones: */
+@media screen and (max-width:650px) {
+
+  [class*="col-"] {
+    width: 100%;   
+  }              
+}
+  
+  @media only screen and (min-width: 651px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */  
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+     
+  }
