@@ -1,1 +1,1 @@
-export let url="http://localhost:3001"
+export let url="https://mess-management-backend-3.onrender.com"
