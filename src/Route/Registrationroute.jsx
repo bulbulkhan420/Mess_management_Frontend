@@ -9,14 +9,13 @@ import Forgetemail from '../registration/Forgetemail.jsx'
 import Changepassword from '../registration/Changepassword.jsx'
 import Home from '../registration/Home.jsx'
 import Loginmess from '../registration/Loginmess.jsx'
-
-import Ownermain from '../Owner-profile/Ownermain.jsx'
 import Otpmess from '../registration/Otpmess.jsx'
 import Otpchangepasswordmess from '../registration/Otpchangepasswordmess.jsx'
 import Changepasswordmess from '../registration/Changepasswordmess.jsx'
-import Studentmain from '../Student-profile/Studentmain.jsx'
 import Studentpro from '../Student-profile/Studentpro.jsx'
 import Ownerprofile from '../Owner-profile/Ownerprofile.jsx'
+import StudentSearch from '../Student-profile/StudentSearch.jsx'
+import Studentmessconfirm from '../Student-profile/Studentmessconfirm.jsx'
 
 
 export default function Registrationroute() {
@@ -36,7 +35,9 @@ export default function Registrationroute() {
   <Routes>
   <Route path='/studentprofile/:email' element={<Studentpro/>} ></Route>
     <Route path="/" element={<Home/>}></Route>
+    <Route path='/studentprofile/search/:email' element={ <StudentSearch/>}/>
     <Route path='/login' element={<Login/>}></Route>
+    <Route path='/studentprofile/search/messconfirm/:info/:email' element={<Studentmessconfirm/>}></Route>
     <Route path='/loginmess' element={<Loginmess/>}></Route>
     <Route path='/signupstudent' element={<Singupstudent/>}></Route>
     <Route path='/signupmess' element={<Singupmess/>} ></Route>

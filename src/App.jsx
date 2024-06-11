@@ -1,19 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './registration/Login.jsx'
-import Otp from './registration/Otp.jsx'
-import Singupstudent from './registration/Singupstudent.jsx'
-import Singupmess from './registration/Singupmess.jsx'
-import Otpchangepassword from './registration/Otpchangepassword.jsx'
-import Forgetemail from './registration/Forgetemail.jsx'
-import Changepassword from './registration/Changepassword.jsx'
-import Home from './registration/Home.jsx'
-import Loginmess from './registration/Loginmess.jsx'
-import Studentmain from './Student-profile/Studentmain';
-import Ownermain from './Owner-profile/Ownermain.jsx'
-import Otpmess from './registration/Otpmess.jsx'
-import Otpchangepasswordmess from './registration/Otpchangepasswordmess.jsx'
-import Changepasswordmess from './registration/Changepasswordmess.jsx'
+
 import Registrationroute from './Route/Registrationroute.jsx'
 
 

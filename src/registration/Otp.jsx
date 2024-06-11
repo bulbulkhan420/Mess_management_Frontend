@@ -18,7 +18,8 @@ export default function Otp() {
     })
     .then((res)=>{
      if(res.data.check){
-      navigate("/studentprofile/"+email);
+      navigate("/login");
+      alert("Your Id was successfully created");
      }
      else{
       alert("Otp doesnot matched");
