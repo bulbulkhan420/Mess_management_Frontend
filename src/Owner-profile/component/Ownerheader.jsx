@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import cssp from '../css/profile.module.css'
+import cssp from '../css/ownerhead.module.css'
 import { Link, useParams } from 'react-router-dom';
-export default function Studentheader() {
+export default function Ownerheader() {
     const [isNavOpen, setIsNavOpen] = useState(false);
   let {email}=useParams();
   const toggleNav = () => {
@@ -14,10 +14,10 @@ export default function Studentheader() {
           ☰
         </button>
         <ul className={isNavOpen ? cssp.navopen : ''}>
-          <li><Link to={`/studentprofile/${email}`}>Profiles</Link></li>
-          <li><Link to={`/studentprofile/search/${email}`}>Searching Mess</Link></li>
-          <li><Link to={`/studentprofile/currentmess/${email}`} >Current Mess</Link></li>
-          <li><Link>About</Link></li>
+         <li><Link to={`/ownerprofile/${email}`} >Dashboard</Link></li>
+         <li><Link to={`/owneravailabel/${email}`}>Available Seat</Link></li>
+         <li><Link to={`/ownerbooked/${email}`}>Booked Seat</Link></li>
+         <li><Link to={`/ownerreservation/${email}`}>Reservation Request</Link></li>
         </ul>
       </nav>
     </div>

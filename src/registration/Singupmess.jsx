@@ -8,6 +8,7 @@ export default function Singupmess() {
   let sel=(e)=>{
      slocation(e.target.value);
   }
+  let [messname,smessname]=useState("");
   let [fname,sfname]=useState("");
   let [lname,slname]=useState("");
   let [email,semail]=useState("");
@@ -23,6 +24,9 @@ export default function Singupmess() {
      }
     else if(e.target.name=="lname"){
       slname(e.target.value);
+     }
+     else if(e.target.name=='messname'){
+      smessname(e.target.value);
      }
      if(e.target.name=="email"){
       semail(e.target.value);
@@ -41,7 +45,7 @@ export default function Singupmess() {
     e.preventDefault();
     if(password==cpassword){
        axios.post(`${url}/ownersignup`,{
-        location,fname,lname,email,phone,password
+        location,fname,lname,email,phone,password,messname
        })
        .then((res)=>{
         if(res.data.check){
@@ -73,6 +77,7 @@ export default function Singupmess() {
             <option value="Kata Khali">Kata Khali</option>
             <option value="Kadir Gong">Kadir Gong</option>
         </select>
+        <input type="text" name='messname' onChange={setval} required placeholder='Mess Name' />
         <input type="text" name='fname' onChange={setval} value={fname}required placeholder='First Name' />
         <input type="text" name='lname' onChange={setval} value={lname} required placeholder='Last Name'/>
         <input type="email" name='email' onChange={setval} value={email} required placeholder='Enter Your Email'/>

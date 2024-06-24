@@ -89,7 +89,7 @@ const StudentSearch = () => {
       {
         seatcard.map((item,i)=>{
             return <div key={i}>
-                <Link to={`/studentprofile/search/messconfirm/${item._id}/${email}`}> <Messcard info={item}  /></Link>
+                <Link to={`/studentprofile/search/messconfirm/${item._id}/${email}/${"Not_paid"}`}> <Messcard info={item}  /></Link>
              
             </div>
         })

@@ -16,6 +16,10 @@ import Studentpro from '../Student-profile/Studentpro.jsx'
 import Ownerprofile from '../Owner-profile/Ownerprofile.jsx'
 import StudentSearch from '../Student-profile/StudentSearch.jsx'
 import Studentmessconfirm from '../Student-profile/Studentmessconfirm.jsx'
+import Owneravailable from '../Owner-profile/Owneravailable.jsx'
+import Ownerbooked from '../Owner-profile/Ownerbooked.jsx'
+import Ownerreservation from '../Owner-profile/Ownerreservation.jsx'
+import StudentMess from '../Student-profile/StudentMess.jsx'
 
 
 export default function Registrationroute() {
@@ -33,25 +37,35 @@ export default function Registrationroute() {
   
   <BrowserRouter>
   <Routes>
+    {/* student*/}
   <Route path='/studentprofile/:email' element={<Studentpro/>} ></Route>
     <Route path="/" element={<Home/>}></Route>
     <Route path='/studentprofile/search/:email' element={ <StudentSearch/>}/>
     <Route path='/login' element={<Login/>}></Route>
-    <Route path='/studentprofile/search/messconfirm/:info/:email' element={<Studentmessconfirm/>}></Route>
+    <Route path='/studentprofile/search/messconfirm/:_id/:email/:stat' element={<Studentmessconfirm/>}></Route>
+    <Route path='/studentprofile/currentmess/:email' element={<StudentMess/>}></Route>
+    {/*registration*/}
     <Route path='/loginmess' element={<Loginmess/>}></Route>
     <Route path='/signupstudent' element={<Singupstudent/>}></Route>
-    <Route path='/signupmess' element={<Singupmess/>} ></Route>
+   
     <Route path='/forgetemail/:id' element={<Forgetemail/>} ></Route>
    
     <Route path='/otp/:email' element={<Otp/>} ></Route>
 
     <Route path='/otppasswordchange/:email' element={<Otpchangepassword/>} ></Route>
-    <Route path='/otppasswordchangemess/:email' element={<Otpchangepasswordmess/>} ></Route>
+    
     
     <Route path='/changepassword/:email' element={<Changepassword/>} ></Route>
+
+    <Route path='/signupmess' element={<Singupmess/>} ></Route>
+    <Route path='/otppasswordchangemess/:email' element={<Otpchangepasswordmess/>} ></Route>
     <Route path='/changepasswordmess/:email' element={<Changepasswordmess/>} ></Route>
-    <Route path='/ownerprofile/:email' element={<Ownerprofile/>} ></Route>
     <Route path='/otpmess/:email' element={<Otpmess/>} ></Route>
+    {/*owner*/}
+    <Route path='/ownerprofile/:email' element={<Ownerprofile/>} ></Route>
+    <Route path='/owneravailabel/:email' element={<Owneravailable/>}></Route>
+    <Route path='/ownerbooked/:email' element={<Ownerbooked/>}></Route>
+    <Route path='/ownerreservation/:email' element={<Ownerreservation/>}></Route>
   </Routes>
   </BrowserRouter>
   </div>
