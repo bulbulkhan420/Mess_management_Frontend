@@ -1,4 +1,4 @@
-export let url="https://mess-management-backend.onrender.com"
+export let url="http://localhost:3001"
 
 //"https://mess-management-backend.onrender.com"
-//"http://localhost:3005"
+//"http://localhost:3001"

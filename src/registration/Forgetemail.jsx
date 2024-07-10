@@ -3,6 +3,8 @@ import "./CSS/otp.css"
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { url } from '../Url';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Forgetemail() {
   let [email,semail]=useState("");
   let navigate=useNavigate();
@@ -14,7 +16,7 @@ export default function Forgetemail() {
   let findmail=(e)=>{
     e.preventDefault();
     if(id=="student"){
-      axios.post("https://mess-management-backend-1.onrender.com/forgetmail",{
+      axios.post(`${url}/forgetmail`,{
         email:email
       })
       .then((res)=>{
@@ -36,7 +38,8 @@ export default function Forgetemail() {
           navigate("/otppasswordchangemess/"+email);
          }
          else{
-          alert("Email does not exist");
+          toast.info("Email does not exist")
+        
          }
       })
     }
@@ -51,6 +54,7 @@ export default function Forgetemail() {
             <button type='submit'>Submit</button>
         </form>
        </div>
+       <ToastContainer position='top-center'/>
     </div>
   )
 }

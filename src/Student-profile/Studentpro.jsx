@@ -5,6 +5,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { url } from '../Url';
 import Studentproupdate from './Studentproupdate';
 import Studentheader from './component/Studentheader';
+import Footer from '../Component/Footer';
+
 export default function Studentpro() {
   let {email}=useParams();
  
@@ -53,22 +55,31 @@ export default function Studentpro() {
         <div className={cssp.profilepicture}>
           <img src={info.image} alt="Profile" />
         </div>
+        <hr style={{color:'black',border:'5px solid',width:'100%',maxWidth:'600px'}}/>
         <div className={cssp.profiledetails}>
           <h1>{info.name}</h1>
+          <hr />
           <div className={cssp.detailitem}><strong>Email:</strong>{info.email}</div>
+          <hr />
           <div className={cssp.detailitem}><strong>Phone:</strong> {info.phone}</div>
+          <hr />
           <div className={cssp.detailitem}><strong>Current Address:</strong>{info.currentaddress}</div>
+          <hr />
           <div className={cssp.detailitem}><strong>Permanent Address:</strong>{info.permanentaddress}</div>
+          <hr />
           <div className={cssp.detailitem}><strong>Current Mess Name:</strong>{info.currentmess}</div>
+          <hr />
           <div className={cssp.detailitem}><strong>Institution Name:</strong>{info.institution}</div>
+          <hr />
           <div style={{display:"flex",justifyContent:"right",width:"100%",marginLeft:"0px"}}><button style={{width:"70px",backgroundColor:'#333',}} onClick={show}>Update</button></div>
         </div>
         
       </main>
-      <footer className={cssp.footer}>
-        <p>&copy; 2023 Mess Management System</p>
-      </footer>
+
+     
+      
     </div>
+    <Footer/>
     </>
     
   );

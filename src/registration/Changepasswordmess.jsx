@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import "./CSS/otp.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../Url';
@@ -26,15 +28,25 @@ export default function Changepasswordmess() {
     })
     .then((res)=>{
       if(res.data.check){
-      nagivate("/ownerprofile/"+email);
+      nagivate("/loginmess");
+      toast.success("Password was changed",{
+        position:'top-center'
+      })
+      
       }
       else{
-        alert("error");
+        toast.info("There is an error",{
+          position:'top-center'
+        })
+       
       }
     })
    }
    else{
-    alert("password not same");
+    toast.info("Password doesn't match",{
+      position:'top-center'
+    })
+    
    }
   }
   
@@ -48,6 +60,7 @@ export default function Changepasswordmess() {
             <button type='submit'>Submit</button>
         </form>
        </div>
+       <ToastContainer position='top-center'/>
     </div>
   )
 }

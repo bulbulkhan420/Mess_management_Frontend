@@ -3,7 +3,8 @@ import "./CSS/login.css"
 import { NavLink, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { url } from '../Url';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Loginmess() {
   let [email,semail]=useState("");
   
@@ -34,7 +35,10 @@ export default function Loginmess() {
        navigate(path);
       }
       else{
-       alert("password or email not matched");
+        toast.info("Password or Email doesn't match",{
+          position:'top-center'
+        })
+       
       }
      
      
@@ -57,6 +61,7 @@ export default function Loginmess() {
       <p style={{textAlign:'center',color:'blue'}}><NavLink to="/forgetemail/owner" className="nodec">Forget Password?</NavLink></p>
         </form>
         </div>
+        <ToastContainer position='top-center'/>
     </div>
   )
 }

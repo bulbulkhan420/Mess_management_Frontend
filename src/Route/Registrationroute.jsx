@@ -18,8 +18,9 @@ import StudentSearch from '../Student-profile/StudentSearch.jsx'
 import Studentmessconfirm from '../Student-profile/Studentmessconfirm.jsx'
 import Owneravailable from '../Owner-profile/Owneravailable.jsx'
 import Ownerbooked from '../Owner-profile/Ownerbooked.jsx'
-import Ownerreservation from '../Owner-profile/Ownerreservation.jsx'
+import Ownernotice from '../Owner-profile/Ownernotice.jsx'
 import StudentMess from '../Student-profile/StudentMess.jsx'
+import Studentnotice from '../Student-profile/Studentnotice.jsx'
 
 
 export default function Registrationroute() {
@@ -44,6 +45,7 @@ export default function Registrationroute() {
     <Route path='/login' element={<Login/>}></Route>
     <Route path='/studentprofile/search/messconfirm/:_id/:email/:stat' element={<Studentmessconfirm/>}></Route>
     <Route path='/studentprofile/currentmess/:email' element={<StudentMess/>}></Route>
+    <Route path='/student/notice/:email' element={<Studentnotice/>}></Route>
     {/*registration*/}
     <Route path='/loginmess' element={<Loginmess/>}></Route>
     <Route path='/signupstudent' element={<Singupstudent/>}></Route>
@@ -65,7 +67,7 @@ export default function Registrationroute() {
     <Route path='/ownerprofile/:email' element={<Ownerprofile/>} ></Route>
     <Route path='/owneravailabel/:email' element={<Owneravailable/>}></Route>
     <Route path='/ownerbooked/:email' element={<Ownerbooked/>}></Route>
-    <Route path='/ownerreservation/:email' element={<Ownerreservation/>}></Route>
+    <Route path='/owner/notice/:email' element={<Ownernotice/>}></Route>
   </Routes>
   </BrowserRouter>
   </div>

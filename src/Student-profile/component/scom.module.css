@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.card{
+   
+    box-shadow: 5px 5px 5px rgb(79, 77, 77);
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    background-color: rgb(225, 224, 235);
+}
+.tac{
+    text-align:right;
+}
+.taci{
+    text-align: center;
+}
+#no{
+    text-decoration: none;
+}
+.about{
+   background-color: rgb(4, 4, 49);
+   line-height: 40px;
+   color: aliceblue;
+  
+ 
+}
+.about:hover{
+    background-color: rgb(41, 9, 71);
+}

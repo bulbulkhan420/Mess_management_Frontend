@@ -3,6 +3,8 @@ import "./CSS/signupmess.css"
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../Url';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Singupmess() {
   let [location,slocation]=useState("");
   let sel=(e)=>{
@@ -49,7 +51,10 @@ export default function Singupmess() {
        })
        .then((res)=>{
         if(res.data.check){
-          alert("email exist");
+          toast.info('Email exist',{
+            position:'top-center'
+          })
+          
         }
         else{
           navigate("/otpmess/"+email);
@@ -57,7 +62,10 @@ export default function Singupmess() {
        })
     }
     else{
-      alert("password dont match");
+      toast.info('Password does not matched',{
+        position:'top-center'
+      })
+     
     }
   }
   return (
@@ -87,6 +95,7 @@ export default function Singupmess() {
         <button type='submit'>Create Account</button>
         
       </form>
+      <ToastContainer position='top-center'/>
         </div>
     </div>
   )

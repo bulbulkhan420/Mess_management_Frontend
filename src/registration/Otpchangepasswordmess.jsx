@@ -3,6 +3,8 @@ import "./CSS/otp.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../Url';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Otpchangepasswordmess() {
   let [otp,sotp]=useState("");
   let {email}=useParams();
@@ -22,7 +24,10 @@ export default function Otpchangepasswordmess() {
             navigate("/changepasswordmess/"+email);
           }
           else{
-            alert("Otp does not match");
+            toast.info("Otp does not match",{
+              position:'top-center'
+            })
+           
           }
       })
   }
@@ -35,6 +40,7 @@ export default function Otpchangepasswordmess() {
             <button type='submit'>Submit</button>
         </form>
        </div>
+       <ToastContainer position='top-center'/>
     </div>
   )
 }

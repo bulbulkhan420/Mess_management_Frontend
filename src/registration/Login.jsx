@@ -3,6 +3,8 @@ import "./CSS/login.css"
 import { url } from '../Url';
 import { NavLink, useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Login() {
    let [email,semail]=useState("");
    let [password,spassword]=useState("");
@@ -32,7 +34,10 @@ export default function Login() {
         navigate(path);
        }
        else{
-        alert("password or email not matched");
+        toast.info("Password or Email doesn't match",{
+          position:'top-center'
+        })
+      
        }
       
       
@@ -56,7 +61,7 @@ export default function Login() {
         </form>
         </div>
         
-       
+       <ToastContainer position='top-center'/>
     </div>
   )
 }

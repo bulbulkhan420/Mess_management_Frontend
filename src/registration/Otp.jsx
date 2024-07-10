@@ -3,6 +3,8 @@ import "./CSS/otp.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../Url';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Otp() {
   let [otp,sotp]=useState("");
   let navigate=useNavigate();
@@ -19,10 +21,16 @@ export default function Otp() {
     .then((res)=>{
      if(res.data.check){
       navigate("/login");
-      alert("Your Id was successfully created");
+      toast.success("Your account was successfully created",{
+        position:'top-center'
+      })
+      
      }
      else{
-      alert("Otp doesnot matched");
+      toast.info("Otp doesn't matched",{
+        position:'top-center'
+      })
+    
      }
     })
   }
@@ -36,7 +44,7 @@ export default function Otp() {
         </form>
        </div>
        
-      
+      <ToastContainer position='top-center'/>
     </div>
   )
 }

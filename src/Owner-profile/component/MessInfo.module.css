@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+  }
+  
+  .info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .info h2 {
+    margin: 10px 0;
+    color: #2c3e50;
+    font-size: 24px;
+  }
+  
+  .info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    color: #34495e;
+    font-size: 16px;
+  }
+  
+  .info p strong {
+    margin-right: 8px;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }
+  
+  .seats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .seatList {
+    width: 45%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .seatList h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .seatItem {
+    padding: 8px;
+    margin-bottom: 5px;
+    background: #f3f3f4;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    color: #2c3e50;
+  }
+  .ll{
+    color: #234667;
+  }
+  @media (max-width: 768px) {
+    .seatList {
+      width: 100%;
+    }
+  
+    .info h2 {
+      font-size: 20px;
+    }
+  
+    .info p {
+      font-size: 14px;
+    }
+  }
+  .stat{
+    height: 20vh;
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    background: #3089db;
+    border: 1px solid #f3f3f4;
+    
+  }
+  .upd{
+    opacity: 0.1;
+  }
+  .upd:hover{
+    opacity: 1;
+  }

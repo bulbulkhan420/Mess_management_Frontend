@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
+
 import Ownerheader from './component/Ownerheader'
 import axios from 'axios';
 import { url } from '../Url';
 import { useNavigate, useParams } from 'react-router-dom';
 import Messcard from '../Student-profile/component/Messcard'
+import Footer from '../Component/Footer';
+import Buttin from '../Component/Buttin';
+
 export default function Owneravailable() {
   let {email}=useParams();
   let [messlist,smesslist]=useState([]);
@@ -27,15 +31,20 @@ export default function Owneravailable() {
    
    })
   },[refress]);
+
+  
   return (
     <div>
         <Ownerheader/>
-        
-      {
+       <div className="container" style={{backgroundColor:'rgb(192,192,213)'}}>
+        <div className="row">
+        {
         messlist.map((item,i)=>{
-          return <div key={i}>
-          <Messcard info={item} />
-          <button onClick={(e)=>{
+          return <div key={i} className='col-lg-4 col-md-6 col-sm-12' >
+          
+       
+         <Messcard info={item} />
+         <span  onClick={(e)=>{
             axios.delete(`${url}/deletroomlist/${item._id}`)
             .then((res)=>{
               if(res.data.ok){
@@ -43,10 +52,18 @@ export default function Owneravailable() {
                 alert('successfully deleted');
               }
             })
-          }}>Delete</button>
+          }} >
+           <Buttin text={"Delete"}/>
+         </span>
+        
+        
           </div>
         })
       }
+        </div>
+    
+      </div> 
+      <Footer/>
     </div>
   )
 }

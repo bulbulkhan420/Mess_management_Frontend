@@ -3,6 +3,7 @@ import "./CSS/signupstudent.css"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { url } from '../Url';
+
 export default function Singupstudent() {
   let [status,sstatus]=useState("");
   let [fname,sfname]=useState("");

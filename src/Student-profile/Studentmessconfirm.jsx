@@ -1,9 +1,13 @@
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Messcard from './component/Messcard';
 import { url } from '../Url';
 import Studentheader from './component/Studentheader';
+import Footer from '../Component/Footer';
+import Buttin from '../Component/Buttin';
 
 export default function Studentmessconfirm() {
     let {_id,email,stat}=useParams();
@@ -26,7 +30,10 @@ export default function Studentmessconfirm() {
         window.location.replace(res.data.url);
       }
      else{
-      alert("You Already Have booked a Room");
+      toast.warn('You Already have booked a room',{
+        position:'top-center'
+      })
+      
      }
     
     })
@@ -44,12 +51,18 @@ export default function Studentmessconfirm() {
         return ;
      }
      if(stat!="Not_paid"){
-      alert('Payment Success');
+      toast.success("Payment Success",{
+        position:'top-center'
+      })
+      
       sbutval("Paid");
       scolor("green");
     }
     else if(stat=="paid"){
-      alert('You Have Already Booked a Seat');
+      toast.warn('You Already have booked a room',{
+        position:'top-center'
+      })
+      
       sbutval("Paid");
       scolor("green");
     }
@@ -63,11 +76,39 @@ export default function Studentmessconfirm() {
   return (
     <div>
         <Studentheader/>
-        <div>
-        <Messcard info={info}/>
-        <button onClick={payment} style={{backgroundColor:`${color}`}}>{butval}</button>
+        <div className='container'>
+          <div className="row">
+            <div className="col-lg-3 col-md-2 col-sm-0"></div>
+            <div className='col-lg-6 col-md-8 col-sm-12'>
+            <Messcard info={info}/>
+            </div>
+        
+         
+        
+        
+         <div className="col-lg-3 col-md-2 col-sm-0"></div>
+          </div>
+
+          <div className="row">
+          <div className="col-lg-3 col-md-2 col-sm-0"></div>
+            <div className='col-lg-6 col-md-8 col-sm-12'>
+              <div dangerouslySetInnerHTML={{__html:info.mess_map}} />
+            </div>
+            <div className="col-lg-3 col-md-2 col-sm-0"></div>
+          </div>
+          <div className="row">
+          <div className="col-lg-3 col-md-2 col-sm-0"></div>
+            <div  className="col-lg-3 col-md-2 col-sm-0">
+            <span onClick={payment}>
+            <Buttin text={`${butval}`} width={`100px`}/>
+          </span>
+            </div>
+            <div className="col-lg-3 col-md-2 col-sm-0"></div>
+          </div>
         </div>
-    
+   
+     <Footer/>
+     <ToastContainer position='top-center'/>
     </div>
   )
 }

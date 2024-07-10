@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import css from './css/profileupdate.module.css'
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { url } from '../Url';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Component/Footer';
 export default function Studentproupdate(props) {
   let authorization=localStorage.getItem("token");
   let navigate=useNavigate();
@@ -58,7 +61,10 @@ export default function Studentproupdate(props) {
     axios.post(`${url}/student/picupload`,formdata)
     .then((res)=>{
       console.log(res.data);
-      alert(res.data.status);
+      toast.info(`${res.data.status}`,{
+        position:'top-center'
+      })
+     
     })
   }
   let save=(e)=>{
@@ -81,7 +87,10 @@ export default function Studentproupdate(props) {
         retunr ;
       }
       if(res.data.ok){
-        alert("Successfully Updated information");
+        toast.success('Successfully Updated information',{
+          position:'top-center'
+        })
+        
        sloadpage(prev=>prev+1);
        rec(loadpage+1);
        status("none");
@@ -89,7 +98,10 @@ export default function Studentproupdate(props) {
       
       }
       else{
-        alert(res.data.ok)
+        toast.success(`${res.data.ok}`,{
+          position:'top-center'
+        })
+       
       }
     })
 
@@ -120,7 +132,10 @@ export default function Studentproupdate(props) {
      
      })
     .catch((err)=>{
-      alert(`you have ${err}`);
+      toast.warn(`You have an ${err}`,{
+        position:'top-center'
+      })
+      
     })
   },[]);
   return (
@@ -129,7 +144,7 @@ export default function Studentproupdate(props) {
        <form onSubmit={subpic} className={css.imagepart}>
        
       <div style={{textAlign:'center',opacity:'0.3'}}> <p>Select Picture</p>
-      <input type="file" accept='image/*'  onChange={update} name='image'/>
+      <input type="file" accept='image/*' required onChange={update} name='image'/>
       </div>
       <p>{imagename}</p>
        <button type='submit'>Upload pic</button>
@@ -152,6 +167,9 @@ export default function Studentproupdate(props) {
         </div>
        </div>
       </div>
+      <Footer/>
+      <ToastContainer position='top-center'/>
+      
     </div>
   )
 }

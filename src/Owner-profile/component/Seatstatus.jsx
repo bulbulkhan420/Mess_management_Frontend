@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { url } from '../../Url';
-
+import css from './MessInfo.module.css'
 export default function Seatstatus(props) {
     let [available,savailable]=useState(0);
     let [booked,sbooked]=useState(0);
@@ -20,9 +20,12 @@ export default function Seatstatus(props) {
     },[props.email.refress])
   return (
     <div>
-      <div>
-        <h5>Available seat:{available}</h5>
-        <h5>Booked Seat:{booked}</h5>
+      <div className='container'>
+        <div className="row">
+        <h5 className={`col-lg-6 col-md-6 col-sm-12 ${css.stat}`} style={{textAlign:'center'}}>Available seat:  {available}</h5>
+        <h5  className={`col-lg-6 col-md-6 col-sm-12 ${css.stat}`} style={{textAlign:'center'}}>Booked Seat:  {booked}</h5>
+        </div>
+       
       </div>
     </div>
   )

@@ -3,6 +3,8 @@ import "./CSS/otp.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../Url';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Changepassword() {
   let [password,spassword]=useState("");
   let [cpassword,scpassword]=useState("");
@@ -26,15 +28,24 @@ export default function Changepassword() {
     })
     .then((res)=>{
       if(res.data.check){
-      nagivate("/studentprofile/"+email);
+      nagivate("/login");
+      toast.success("Password was changed",{
+        position:'top-center'
+      })
+      
       }
       else{
-        alert("error");
+        toast.error("There is an error",{
+          position:'top-center'
+        });
       }
     })
    }
    else{
-    alert("password not same");
+    toast.info("password not same",{
+      position:'top-center'
+    })
+    
    }
   }
   
@@ -48,6 +59,7 @@ export default function Changepassword() {
             <button type='submit'>Submit</button>
         </form>
        </div>
+       <ToastContainer position="top-center" />
     </div>
   )
 }
