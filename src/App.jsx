@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Registrationroute from './Route/Registrationroute.jsx'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function App() {
+  useEffect(()=>{
+    AOS.init({
+      duration:800,
+      easing:'ease-in-out'
+     
+    })
+  },[]);
   return (
     <div>
    

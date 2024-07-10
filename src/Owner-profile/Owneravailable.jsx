@@ -40,7 +40,7 @@ export default function Owneravailable() {
         <div className="row">
         {
         messlist.map((item,i)=>{
-          return <div key={i} className='col-lg-4 col-md-6 col-sm-12' >
+          return <div key={i} className='col-lg-4 col-md-6 col-sm-12' data-aos="fade-up">
           
        
          <Messcard info={item} />

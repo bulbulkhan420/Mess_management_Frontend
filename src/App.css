@@ -77,6 +77,9 @@
   .fs{
     font-size: xx-small;
   }
+  .fsu{
+    font-size: 12px;
+ }
   /* Columns: Small devices (≥576px) */
   @media (min-width: 576px) {
     .col-sm-1 { flex: 0 0 auto; width: 8.333333%; }
@@ -94,6 +97,9 @@
     .fs{
         font-size: smaller;
       }
+      .fsu{
+        font-size: 15px;
+     }
   }
   
   /* Columns: Medium devices (≥768px) */
@@ -113,6 +119,9 @@
     .fs{
         font-size: small;
       }
+      .fsu{
+        font-size: 18px;
+     }
   }
   
   /* Columns: Large devices (≥992px) */
@@ -132,6 +141,9 @@
     .fs{
         font-size: medium;
       }
+      .fsu{
+        font-size: 20px;
+     }
   }
   
   /* Columns: Extra large devices (≥1200px) */
@@ -151,6 +163,9 @@
     .fs{
         font-size:small;
       }
+      .fsu{
+        font-size: 25px;
+     }
   }
   
   /* Columns: Extra extra large devices (≥1400px) */
@@ -170,5 +185,8 @@
     .fs{
         font-size:small;
       }
+      .fsu{
+         font-size: 25px;
+      }
   }
-  
+ 

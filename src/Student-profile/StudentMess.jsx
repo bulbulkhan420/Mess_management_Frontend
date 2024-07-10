@@ -7,6 +7,7 @@ import Footer from '../Component/Footer';
 import Messcard from './component/Messcard';
 import Buttin from '../Component/Buttin';
 
+
 export default function StudentMess() {
     let {email}=useParams();
     let [info,sinfo]=useState({});
@@ -26,6 +27,7 @@ export default function StudentMess() {
     }
   let navigate=useNavigate();
     useEffect(()=>{
+     
        let token=localStorage.getItem('token');
        axios.post(`${url}/mess/status`,{
         authorization:token,
@@ -47,7 +49,7 @@ export default function StudentMess() {
   {
     book? <div>
     <Studentheader/>
-   <div className="container">
+   <div className="container" data-aos="fade-up">
     <div className="row">
       <div className="col-lg-3 col-md-2 col-sm-0"></div>
     <div className='col-lg-6 col-md-8 col-sm-12'>
@@ -94,9 +96,9 @@ export default function StudentMess() {
    </div>
    <div className="col-lg-3 col-md-2 col-sm-0"></div>
 </div>
-:<div>
+:<div >
     <Studentheader/>
-    <h3>Not seat</h3>
+    <div style={{width:'100%',height:'80dvh',display:'flex',justifyContent:'center',alignItems:'center'}}>Not Booked Any Seat</div>
 </div>
   }
   <Footer/>

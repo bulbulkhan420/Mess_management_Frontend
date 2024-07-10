@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import cssp from '../css/ownerhead.module.css'
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import logo from '../../Logo.png'
 export default function Ownerheader() {
   let navigate=useNavigate();
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -25,6 +26,7 @@ export default function Ownerheader() {
          }}  style={{color:'aliceblue'}}>Sign Out</li>
          <li style={{color:'aliceblue'}}>Help</li>
         </ul>
+        <img style={{height:'25px',width:'25px',float:'right',right:'2rem',position:'absolute'}} src={logo} alt="" />
       </nav>
     </div>
   )

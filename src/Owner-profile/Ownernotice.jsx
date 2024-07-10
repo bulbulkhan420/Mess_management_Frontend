@@ -72,7 +72,7 @@ export default function Ownernotice() {
       <div>
         {
           postinfo.map((item,i)=>{
-            return <div key={i}>
+            return <div key={i} data-aos="fade-up">
                <div className="container" >
                 <div className="row">
                     <div className='col-lg-3 col-md-1 col-sm-0'></div>

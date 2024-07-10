@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import cssp from '../css/profile.module.css'
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import logo from '../../Logo.png'
 export default function Studentheader() {
     const [isNavOpen, setIsNavOpen] = useState(false);
   let {email}=useParams();
@@ -23,9 +24,10 @@ export default function Studentheader() {
           <li onClick={()=>{
           localStorage.removeItem('token');
           navigate('/login');
-         }} style={{color:'aliceblue'}}>Sign Out</li>
-         <li style={{color:'aliceblue'}}>Help</li>
+         }} style={{color:'aliceblue',cursor:'pointer'}}>Sign Out</li>
+         <li style={{color:'aliceblue',cursor:'pointer'}}>Help</li>
         </ul>
+        <img style={{height:'25px',width:'25px',float:'right',right:'2rem',position:'absolute'}} src={logo} alt="" />
       </nav>
     </div>
   )

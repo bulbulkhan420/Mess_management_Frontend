@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 import { url } from '../Url';
 import { useNavigate, useParams } from 'react-router-dom';
 import Ownerheader from './component/Ownerheader';
@@ -142,7 +143,7 @@ export default function Ownerprofile() {
        
     </div>
     {/* seat adding section */}
-    <div className={styles.formContainer}>
+    <div className={styles.formContainer} data-aos="fade-up">
     <form onSubmit={addnew}>
       <h3 style={{textAlign:'center',padding:'1rem'}}>Add New Room Information</h3>
       <div  className={styles.inputGroup}>
@@ -183,7 +184,7 @@ export default function Ownerprofile() {
       
     </form>
     </div>
-    <div>
+    <div data-aos="fade-up">
         <div style={{width:'100%'}} dangerouslySetInnerHTML={{__html:info.mess_map}}/>
         <div  onClick={()=>{
           supshow("none");

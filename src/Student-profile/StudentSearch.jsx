@@ -125,13 +125,14 @@ const StudentSearch = () => {
       </form>
       <div className="container" style={{backgroundColor:'rgb(192,192,213)'}}>
         <div className="row">
-        {
-        seatcard.map((item,i)=>{
-            return <div key={i} className='col-lg-4 col-md-6 col-sm-12'>
+        {seatcard.length>0?seatcard.map((item,i)=>{
+            return <div key={i} className='col-lg-4 col-md-6 col-sm-12' data-aos="fade-up">
                  <div><Messcard info={item} text={"Show More"} navigator={`/studentprofile/search/messconfirm/${item._id}/${email}/${"Not_paid"}`} /></div>
              
             </div>
-        })
+        }):<div style={{height:'90dvh',width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}}>
+            <h3>No Match Found</h3>
+        </div>
       }
         </div>
       </div>

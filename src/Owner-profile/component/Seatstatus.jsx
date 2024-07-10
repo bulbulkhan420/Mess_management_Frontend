@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { url } from '../../Url';
+import Countup from 'react-countup';
 import css from './MessInfo.module.css'
 export default function Seatstatus(props) {
     let [available,savailable]=useState(0);
@@ -22,8 +23,8 @@ export default function Seatstatus(props) {
     <div>
       <div className='container'>
         <div className="row">
-        <h5 className={`col-lg-6 col-md-6 col-sm-12 ${css.stat}`} style={{textAlign:'center'}}>Available seat:  {available}</h5>
-        <h5  className={`col-lg-6 col-md-6 col-sm-12 ${css.stat}`} style={{textAlign:'center'}}>Booked Seat:  {booked}</h5>
+        <h5 className={`col-lg-6 col-md-6 col-sm-12 ${css.stat}`} style={{textAlign:'center'}}>Available seat:  <Countup start={0} end={available} duration={5} delay={0} /></h5>
+        <h5  className={`col-lg-6 col-md-6 col-sm-12 ${css.stat}`} style={{textAlign:'center'}}>Booked Seat:  <Countup start={0} end={booked} duration={10} delay={0} /></h5>
         </div>
        
       </div>

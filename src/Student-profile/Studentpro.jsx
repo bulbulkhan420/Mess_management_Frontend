@@ -25,6 +25,7 @@ export default function Studentpro() {
  }
   let [info,sinfo]=useState({});
   useEffect(()=>{
+    
     axios.post(`${url}/verify/student`,{
       authorization:token
      
@@ -51,8 +52,8 @@ export default function Studentpro() {
     
     <div className={cssp.profilepage} >
      <Studentheader/>
-      <main className={cssp.maincontent}>
-        <div className={cssp.profilepicture}>
+      <main className={cssp.maincontent} data-aos="zoom-in">
+        <div className={cssp.profilepicture} >
           <img src={info.image} alt="Profile" />
         </div>
         <hr style={{color:'black',border:'5px solid',width:'100%',maxWidth:'600px'}}/>

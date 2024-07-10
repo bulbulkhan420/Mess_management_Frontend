@@ -53,9 +53,7 @@ export default function Ownerbooked() {
               unav.map((item,i)=>{
                
                 return <tr key={i}>
-                   {
                   
-                   }
                    <td className='fs' style={{textAlign:'center'}}>
                 {item.student_booked}
                    </td>

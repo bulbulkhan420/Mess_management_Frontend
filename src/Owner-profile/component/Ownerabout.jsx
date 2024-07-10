@@ -4,6 +4,7 @@ import { IoMdSend } from "react-icons/io";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './MessInfo.module.css';
+import { RiProfileLine } from "react-icons/ri";
 import axios from 'axios';
 import { url } from '../../Url';
 import { useParams } from 'react-router-dom';
@@ -51,7 +52,8 @@ const Ownerabout = ({ image, messName, name, phone, email }) => {
       <img src={im} alt="Mess" className={styles.image} />
       <div className={styles.info}>
         <h2>{messName}</h2>
-        <p><strong>Name:</strong> {name}</p>
+        <p><RiProfileLine className={styles.icon}  />
+            <strong>Name:</strong> {name}</p>
         <p>
           <FaPhoneAlt className={styles.icon} />
           <strong>Phone:</strong> {pnumber}
