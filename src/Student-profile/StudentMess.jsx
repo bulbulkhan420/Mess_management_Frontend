@@ -6,7 +6,8 @@ import { url } from '../Url';
 import Footer from '../Component/Footer';
 import Messcard from './component/Messcard';
 import Buttin from '../Component/Buttin';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function StudentMess() {
     let {email}=useParams();
@@ -49,7 +50,7 @@ export default function StudentMess() {
   {
     book? <div>
     <Studentheader/>
-   <div className="container" data-aos="fade-up">
+   <div className="container">
     <div className="row">
       <div className="col-lg-3 col-md-2 col-sm-0"></div>
     <div className='col-lg-6 col-md-8 col-sm-12'>
@@ -80,7 +81,10 @@ export default function StudentMess() {
        .then((res)=>{
         if(res.data.verify){
            srefress(pr=>(pr+1)%9);
-           alert('successfully deleted');
+           toast.success('successfully deleted',{
+            position:'top-center'
+           })
+          
         }
        
        })
@@ -102,6 +106,7 @@ export default function StudentMess() {
 </div>
   }
   <Footer/>
+  <ToastContainer position='top-center'/>
   </>
   )
 }

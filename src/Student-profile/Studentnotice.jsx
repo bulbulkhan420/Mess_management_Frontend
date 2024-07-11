@@ -23,7 +23,7 @@ export default function Studentnotice() {
         }
         else{
             
-            toast.warn("You have no account",{
+            toast.warn("You have no Notice",{
                 position:'top-center'
             })
            
@@ -58,7 +58,7 @@ export default function Studentnotice() {
         })
 
        }
-        </div>:<h1 style={{textAlign:'center',height:'90dvh',display:'flex',alignItems:'center',justifyContent:'center'}}>Not booked any mess</h1>
+        </div>:<h1 style={{textAlign:'center',height:'90dvh',display:'flex',alignItems:'center',justifyContent:'center'}}>Not have any Notice</h1>
      }
      <Footer/>
      <ToastContainer position='top-center'/>
