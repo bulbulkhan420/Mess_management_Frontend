@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaPhoneAlt, FaEnvelope,FaExternalLinkAlt} from 'react-icons/fa';
 import { IoMdSend } from "react-icons/io";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 import styles from './MessInfo.module.css';
 import { RiProfileLine } from "react-icons/ri";
 import axios from 'axios';
@@ -27,15 +26,11 @@ const Ownerabout = ({ image, messName, name, phone, email }) => {
        .then((res)=>{
         if(res.data.verify && res.data.ok){
            
-           toast.success("Successfully Updated",{
-            position:'top-center'
-           }) 
+          alert('Updated')
           
         }
         else{
-            toast.info("Something Wrong",{
-                position:'top-center'
-               })  
+            alert('Something Wrong') 
         }
        
        })
@@ -75,7 +70,7 @@ const Ownerabout = ({ image, messName, name, phone, email }) => {
           
         </p>
       </div>
-      <ToastContainer position='top-center'/>
+      
     </div>
   );
 };
