@@ -59,12 +59,12 @@
         justify-content: center;
         align-items: center;
         border: 1px solid black;
-        width: 70%;
+        width: 90%;
         height: 50vh;
         background-color: aliceblue;
     }
     .log-1 > input,button{
-        width: 70%;
+        width: 80%;
         line-height: 30px;
         border-radius: 5px;
         margin: 5px;

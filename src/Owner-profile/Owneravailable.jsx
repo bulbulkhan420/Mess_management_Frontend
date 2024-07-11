@@ -36,7 +36,7 @@ export default function Owneravailable() {
   return (
     <div>
         <Ownerheader/>
-       <div className="container" style={{backgroundColor:'rgb(192,192,213)'}}>
+       <div className="container" style={{backgroundColor:'rgb(192,192,213)',height:'90dvh'}}>
         <div className="row">
         {
         messlist.map((item,i)=>{

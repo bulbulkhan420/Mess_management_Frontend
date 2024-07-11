@@ -69,7 +69,7 @@ export default function Ownernotice() {
        
       </div>
 
-      <div>
+      <div style={{minHeight:'60dvh'}}>
         {
           postinfo.map((item,i)=>{
             return <div key={i} data-aos="fade-up">
