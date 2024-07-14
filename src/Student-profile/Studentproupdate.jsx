@@ -83,7 +83,7 @@ export default function Studentproupdate(props) {
     .then((res)=>{
       console.log(res.data);
       if(res.data.verify==false){
-        navigate('/login');
+        navigate('/');
         retunr ;
       }
       if(res.data.ok){
@@ -126,7 +126,7 @@ export default function Studentproupdate(props) {
         sinstitution(info.institution);
       }
      else{
-      navigate("/login");
+      navigate("/");
      }
      
      

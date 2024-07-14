@@ -48,7 +48,7 @@ const StudentSearch = () => {
      .then((res)=>{
         console.log(res.data)
         if(res.data.verify==false){
-          navigate('/login');
+          navigate('/');
           return ;
         }
         if(res.data.ok){

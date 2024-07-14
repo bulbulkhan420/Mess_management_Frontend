@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Studentheader from './component/Studentheader'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
 import { url } from '../Url';
 import Noticecard from '../Component/Noticecard';
@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 export default function Studentnotice() {
     let {email}=useParams();
+    let navigate=useNavigate();
     let [info,sinfo]=useState([]);
     let token=localStorage.getItem('token');
     useEffect(()=>{
@@ -20,6 +21,9 @@ export default function Studentnotice() {
         if(res.data.verify && res.data.available){
             sinfo(res.data.info);
             console.log(res.data.info);
+        }
+        else if(res.data.verify==false){
+            navigate('/');
         }
         else{
             

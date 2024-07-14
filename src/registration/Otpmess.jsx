@@ -20,10 +20,11 @@ export default function Otpmess() {
     })
     .then((res)=>{
      if(res.data.check){
-      navigate("/loginmess");
       toast.success("Your account successfully created",{
         position:'top-center'
       })
+      navigate("/loginmess");
+     
      
      }
      else{

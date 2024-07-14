@@ -21,12 +21,12 @@ export default function Owneravailable() {
     authorization:token
    })
    .then((res)=>{
-    if(res.data.verify==false){
-      navigate('/loginmess');
+    if(res.data.verify==true){
+      smesslist(res.data.info);
     }
     else{
-      smesslist(res.data.info);
-    
+     
+      navigate('/');
     }
    
    })
@@ -36,7 +36,7 @@ export default function Owneravailable() {
   return (
     <div>
         <Ownerheader/>
-       <div className="container" style={{backgroundColor:'rgb(192,192,213)',height:'90dvh'}}>
+       <div className="container" style={{backgroundColor:'rgb(192,192,213)',minHeight:'90dvh'}}>
         <div className="row">
         {
         messlist.map((item,i)=>{

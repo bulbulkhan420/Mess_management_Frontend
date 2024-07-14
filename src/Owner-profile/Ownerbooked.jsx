@@ -18,13 +18,14 @@ export default function Ownerbooked() {
       mess_email:email
     })
     .then((res)=>{
-      if(res.status!=200){
-         navigate('/loginmess')
+      if(res.status==200){
+        sunav(res.data.info);
+        
       }
       else{
        
-        sunav(res.data.info);
-        console.log(res.data.info);
+        navigate('/');
+       
        
       }
     })

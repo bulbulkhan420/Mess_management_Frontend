@@ -17,9 +17,9 @@ export default function Noticecard(props) {
         </div>
        
       </div>
-      <div className="container">
+      <div className="container-fluid">
       <div className="row" >
-       <p className='col-12' style={{fontSize:'8px',color:'green',textAlign:'left'}}>{info.postdate}</p>
+       <p className='col-12' style={{fontSize:'8px',color:'green',textAlign:'left',margin:'0px'}}>{info.postdate}</p>
        </div>
       </div>
     </div>

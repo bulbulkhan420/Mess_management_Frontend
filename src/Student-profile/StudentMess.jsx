@@ -41,7 +41,7 @@ export default function StudentMess() {
             sbook(res.data.booked)
           }
          else{
-            navigate('/login');
+            navigate('/');
          }
        })
     },[refress]);
@@ -80,11 +80,15 @@ export default function StudentMess() {
        })
        .then((res)=>{
         if(res.data.verify){
-           srefress(pr=>(pr+1)%9);
-           toast.success('successfully deleted',{
+          toast.success('successfully deleted',{
             position:'top-center'
            })
+           srefress(pr=>(pr+1)%9);
           
+          
+        }
+        else{
+          navigate('/');
         }
        
        })

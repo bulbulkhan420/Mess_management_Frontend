@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Ownerheader from './component/Ownerheader'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../Url';
 import Noticecard from '../Component/Noticecard';
@@ -11,6 +11,7 @@ import Buttin from '../Component/Buttin';
 export default function Ownernotice() {
   let [post,spost]=useState("");
   let {email}=useParams();
+  let navigate=useNavigate();
   let [refress,srefress]=useState(0);
   let token=localStorage.getItem('tokenowner');
   let [postinfo,spostinfo]=useState([]);
@@ -40,6 +41,9 @@ export default function Ownernotice() {
       .then((res)=>{
         if(res.data.verify){
           spostinfo(res.data.info);
+        }
+        else{
+          navigate('/');
         }
       }) 
     },[refress]);

@@ -20,10 +20,11 @@ export default function Otp() {
     })
     .then((res)=>{
      if(res.data.check){
-      navigate("/login");
       toast.success("Your account was successfully created",{
         position:'top-center'
       })
+      navigate("/login");
+     
       
      }
      else{

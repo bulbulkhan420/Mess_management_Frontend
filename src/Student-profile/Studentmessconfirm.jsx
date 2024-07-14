@@ -47,7 +47,7 @@ export default function Studentmessconfirm() {
     .then((res)=>{
         console.log(res)
      if(res.data.verify==false){
-        navigate('/login');
+        navigate('/');
         return ;
      }
      if(stat!="Not_paid"){

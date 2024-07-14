@@ -37,7 +37,7 @@ export default function Studentpro() {
        
       }
       else{
-        navigate('/login');
+        navigate('/');
       }
     })
   },[loadpage,toggle])

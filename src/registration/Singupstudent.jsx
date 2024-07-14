@@ -67,8 +67,7 @@ export default function Singupstudent() {
         <button type='submit'>Create Account</button>
         <p style={{textAlign:'center',color:'red'}}>{status}</p>
       </form>
-        </div>
-      
+        </div>      
     </div>
   )
 }

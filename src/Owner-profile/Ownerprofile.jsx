@@ -119,7 +119,7 @@ export default function Ownerprofile() {
         srefress(pre=>(pre+1)%9);
       }
       else{
-        navigate('/loginmess');
+        navigate('/');
       }
     })
   }
@@ -215,6 +215,9 @@ export default function Ownerprofile() {
             if(res.data.verify){
               
               srefress(prev=>(prev+1)%9);
+            }
+            else{
+              navigate('/');
             }
           })
         }}>Add Map</button>
