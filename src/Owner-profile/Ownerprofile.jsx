@@ -44,7 +44,7 @@ export default function Ownerprofile() {
         sowner(res.data.info.fname+" "+res.data.info.lname);
       }
       else{
-        navigate('/loginmess');
+        navigate('/');
       }
         
      })
