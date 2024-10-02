@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./CSS/otp.css"
+import styles from  "./CSS/Otp.module.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../Url';
@@ -51,8 +51,8 @@ export default function Changepassword() {
   
   return (
     <div>
-      <div className="dismain">
-       <form className='dis' onSubmit={changepass}>
+      <div className={styles.dismain}>
+       <form className={styles.dis} onSubmit={changepass}>
             <p style={{textAlign:'center'}}>Change Password</p>
             <input type="password" name='pass' value={password} onChange={setv} required placeholder='Enter New Password'/>
             <input type="password" name='cpass' value={cpassword} onChange={setv} required placeholder='Confirm New Password'/>

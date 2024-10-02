@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./CSS/signupstudent.css"
+import csmm from "./CSS/Signupstudent.module.css"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { url } from '../Url';
@@ -55,8 +55,8 @@ export default function Singupstudent() {
   }
   return (
     <div>
-        <div className="dismain">
-        <form className='dis' onSubmit={submitform}>
+        <div className={csmm.dismain}>
+        <form className={csmm.dis} onSubmit={submitform}>
             <p style={{color:'rgb(7,7,159)',fontWeight:'bolder'}}>Create Account</p>
         <input type="text" name='fname' value={fname} onChange={setvalue} required placeholder='First Name' />
         <input type="text" name='lname' value={lname} onChange={setvalue} required placeholder='Last Name'/>

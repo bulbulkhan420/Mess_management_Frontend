@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./CSS/otp.css"
+import styles from "./CSS/Otp.module.css"
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { url } from '../Url';
@@ -47,9 +47,9 @@ export default function Forgetemail() {
   }
   return (
     <div>
-       <div className="dismain">
-       <form className='dis' onSubmit={findmail}>
-            <p style={{textAlign:'center'}}>Enter Your Email</p>
+       <div className={styles.dismain}>
+       <form className={styles.dis} onSubmit={findmail}>
+            <h3 style={{textAlign:'center', color:'green'}}>Enter Your Email</h3>
             <input type="email" value={email} onChange={setvalue} required placeholder='Enter Your Email'/>
             <button type='submit'>Submit</button>
         </form>
