@@ -55,7 +55,7 @@ export default function Loginmess() {
         <p style={{color:'rgb(7,7,159)',fontWeight:'bolder'}}>Owners Login</p>
         <input type="email" value={email} name='email' onChange={valueset} placeholder='Enter Your Email'required/>
       <input type="password" value={password} name='password' onChange={valueset} required placeholder='Enter Your password' />
-      <button type='submit'>Login</button>
+      <button type='submit' className={styles.btn}>Login</button>
       
       <p style={{textAlign:'center',color:'blue'}}><NavLink to="/signupmess" className={styles.nodec}>Create new Account</NavLink></p>
       <p style={{textAlign:'center',color:'blue'}}><NavLink to="/forgetemail/owner" className={styles.nodec}>Forget Password?</NavLink></p>

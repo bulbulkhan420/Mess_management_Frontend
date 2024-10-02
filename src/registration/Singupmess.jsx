@@ -72,8 +72,8 @@ export default function Singupmess() {
     <div>
       <div className={csm.dismain}>
         <form className={csm.dis} onSubmit={subfrm}>
-            <p style={{color:'rgb(7,7,159)',fontWeight:'bolder'}}>Create Account</p>
-        <select name="" id="" required onChange={sel} value={location}>
+            <p className={csm.pp} style={{color:'rgb(7,7,159)',fontWeight:'bolder'}}>Create Account</p>
+        <select className={csm.sec} name="" id="" required onChange={sel} value={location}>
             <option value="">Choose Location</option>
             <option value="Binodpur">Binodpur</option>
             <option value="Kajla">Kajla</option>
@@ -85,14 +85,14 @@ export default function Singupmess() {
             <option value="Kata Khali">Kata Khali</option>
             <option value="Kadir Gong">Kadir Gong</option>
         </select>
-        <input type="text" name='messname' onChange={setval} required placeholder='Mess Name' />
-        <input type="text" name='fname' onChange={setval} value={fname}required placeholder='First Name' />
-        <input type="text" name='lname' onChange={setval} value={lname} required placeholder='Last Name'/>
-        <input type="email" name='email' onChange={setval} value={email} required placeholder='Enter Your Email'/>
-        <input type="number" name='phone' onChange={setval} value={phone} required placeholder='Enter Your Contract Number'/>
-        <input type="password" name='password' onChange={setval} value={password} required placeholder='Enter Your Password' />
-        <input type="password" name='cpassword' onChange={setval} value={cpassword} required placeholder='Confirm Your Password' />
-        <button type='submit'>Create Account</button>
+        <input className={csm.in} type="text" name='messname' onChange={setval} required placeholder='Mess Name' />
+        <input className={csm.in} type="text" name='fname' onChange={setval} value={fname}required placeholder='First Name' />
+        <input className={csm.in} type="text" name='lname' onChange={setval} value={lname} required placeholder='Last Name'/>
+        <input className={csm.in} type="email" name='email' onChange={setval} value={email} required placeholder='Enter Your Email'/>
+        <input className={csm.in} type="number" name='phone' onChange={setval} value={phone} required placeholder='Enter Your Contract Number'/>
+        <input className={csm.in} type="password" name='password' onChange={setval} value={password} required placeholder='Enter Your Password' />
+        <input className={csm.in} type="password" name='cpassword' onChange={setval} value={cpassword} required placeholder='Confirm Your Password' />
+        <button type='submit' className={csm.btn}>Create Account</button>
         
       </form>
       <ToastContainer position='top-center'/>

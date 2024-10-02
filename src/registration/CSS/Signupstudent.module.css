@@ -80,16 +80,16 @@ button:hover{
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.dis p {
+.pp {
     color: #073083;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.dis input,
-button,
-select {
+.in,
+.btn
+{
     width: 80%;
     height: 40px;
     margin: 10px 0;
@@ -101,22 +101,15 @@ select {
     transition: all 0.3s ease-in-out;
 }
 
-.dis input:focus,
-select:focus {
+.in:focus,
+{
     border-color: #073083;
     box-shadow: 0 0 8px rgba(7, 7, 159, 0.2);
 }
 
-.dis select {
-    text-align: center;
-}
 
-.dis option {
-    text-align: center;
-}
-
-button {
-    width: 85%;
+.btn {
+    /* width: 85%; */
     background-color: #073083;
     color: white;
     cursor: pointer;
@@ -127,14 +120,17 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.btn:hover {
     background-color: #0056b3;
     box-shadow: 0px 4px 10px rgba(7, 7, 159, 0.3);
 }
 
-button:active {
+.btn:active {
     background-color: #073083;
     box-shadow: none;
+}
+.btn{
+    width: 80%;
 }
 
 @media screen and (max-width: 700px) {
@@ -143,24 +139,21 @@ button:active {
         padding: 25px;
     }
 
-    button,
-    input,
-    select {
+   .btn,.in{
         width: 100%;
     }
 
-    input,
-    select {
+   .in {
         font-size: 16px;
         height: 38px;
     }
 
-    button {
+    .btn {
         font-size: 16px;
         height: 40px;
     }
 
-    p {
+    .pp {
         font-size: 22px;
     }
 }
@@ -171,24 +164,22 @@ button:active {
         padding: 20px;
     }
 
-    button,
-    input,
-    select {
+   .btn,
+   .in{
         width: 100%;
         font-size: 14px;
     }
 
-    input,
-    select {
+    .in{
         height: 35px;
     }
 
-    button {
+    .btn {
         height: 38px;
         font-size: 15px;
     }
 
-    p {
+    .pp {
         font-size: 20px;
     }
 }
