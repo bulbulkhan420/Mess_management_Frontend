@@ -11,7 +11,7 @@ export default function Buttin({text,width}) {
     }
   return (
     <div>
-      <button className={css.forbutton} style={{width:`${wv}`,margin:'5px 0px 5px 0px'}}>{text}</button>
+      <button className={css.forbutton} style={{width:`${wv}`,margin:'5px 0px 5px 0px',fontSize:'10px'}}>{text}</button>
     </div>
   )
 }

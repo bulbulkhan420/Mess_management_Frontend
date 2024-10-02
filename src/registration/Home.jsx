@@ -8,7 +8,9 @@ import pic3 from '../pic3.jpg'
 import pic4 from '../pic4.jpg'
 import pic6 from '../pic5.jpg'
 import Footer from '../Component/Footer';
-
+import Review from './Review'
+import FrequentlyAskedQuestion from './FrequentlyAskedQuestion'
+import AboutUs from './AboutUs'
 
 const slideStyles = {
   width: "100%",
@@ -113,13 +115,10 @@ export default function Home() {
         ))}
       </div>
     </div>
-     <div  style={{width:'70%',height:'40dvh',margin:'1rem auto',backgroundColor:'#333'}}>
-        <h3 style={{textAlign:'center',backgroundColor:'rgb(225, 224, 235)'}}>About us</h3>
-        <hr />
-        <div style={{textAlign:'center',width:'100%',height:'200px',backgroundColor:'rgb(225, 224, 235)',margin:'1rem auto',border:'1px solid black',overflowY:'scroll'}}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore optio dicta expedita cum iusto rerum? Earum doloribus similique repudiandae facere, eaque id repellat nemo alias molestias maxime nihil libero quasi!
-        </div>
-     </div>
+     
+     <AboutUs/>
+     <FrequentlyAskedQuestion/>
+     <Review/>
       <Footer/>
     </div>
     

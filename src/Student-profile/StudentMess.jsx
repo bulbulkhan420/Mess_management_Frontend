@@ -73,32 +73,32 @@ export default function StudentMess() {
       
       <span style={{display:'inline'}} onClick={()=>{
        let token=localStorage.getItem('token');
-       axios.post(`${url}/delete/studentmess`,{
-           tran_id:info.tran_id,
-           _id:info.mess_info._id,
-           authorization:token
-       })
-       .then((res)=>{
-        if(res.data.verify){
-          toast.success('successfully deleted',{
-            position:'top-center'
-           })
-           srefress(pr=>(pr+1)%9);
-          
-          
-        }
-        else{
-          navigate('/');
-        }
-       
-       })
+       if(confirm("Are you sure to leave the room?")){
+        axios.post(`${url}/delete/studentmess`,{
+          tran_id:info.tran_id,
+          _id:info.mess_info._id,
+          authorization:token
+      })
+      .then((res)=>{
+       if(res.data.verify){
+         toast.success('successfully deleted',{
+           position:'top-center'
+          })
+          srefress(pr=>(pr+1)%9);
+         
+         
+       }
+       else{
+         navigate('/');
+       }
+      
+      })
+       }
+      
      }}>
       <Buttin text={"Leave"}/>
       </span>
-      </div>
-     
-    
-    
+      </div> 
    </div>
     </div>
    </div>

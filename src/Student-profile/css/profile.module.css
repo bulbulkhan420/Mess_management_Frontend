@@ -20,6 +20,7 @@ body, html {
     border: none;
     justify-content: space-between;
     align-items: center;
+    line-height: 50px;
   }
   
   .navbar ul {

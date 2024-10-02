@@ -23,9 +23,9 @@ export default function Studentheader() {
           <li style={{color:'aliceblue'}}><Link to={`/student/notice/${email}`}>Notice</Link> </li>
           <li onClick={()=>{
           localStorage.removeItem('token');
-          navigate('/login');
+          navigate('/');
          }} style={{color:'aliceblue',cursor:'pointer'}}>Sign Out</li>
-         <li style={{color:'aliceblue',cursor:'pointer'}}>Help</li>
+        
         </ul>
         <img style={{height:'25px',width:'25px',float:'right',right:'2rem',position:'absolute'}} src={logo} alt="" />
       </nav>

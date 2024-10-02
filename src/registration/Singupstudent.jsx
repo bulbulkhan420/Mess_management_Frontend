@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "./CSS/signupstudent.css"
+import './CSS/signupstudent.css'
+import csmm from "./CSS/Signupstudent.module.css"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { url } from '../Url';
@@ -55,19 +56,19 @@ export default function Singupstudent() {
   }
   return (
     <div>
-        <div className="dismain">
-        <form className='dis' onSubmit={submitform}>
-            <p style={{color:'rgb(7,7,159)',fontWeight:'bolder'}}>Create Account</p>
-        <input type="text" name='fname' value={fname} onChange={setvalue} required placeholder='First Name' />
-        <input type="text" name='lname' value={lname} onChange={setvalue} required placeholder='Last Name'/>
-        <input type="email" name='email' value={email} onChange={setvalue} required placeholder='Enter Your Email'/>
-        <input type="number"name='phone' value={phone} onChange={setvalue} required placeholder='Enter Your Contract Number'/>
-        <input type="password" name='password' value={password} onChange={setvalue} required placeholder='Enter Your Password' />
-        <input type="password" name='cpassword' value={cpassword} onChange={setvalue} required placeholder='Confirm Your Password' />
-        <button type='submit'>Create Account</button>
+        <div className={csmm.dismain}>
+        <form className={csmm.dis} onSubmit={submitform}>
+            <p className={csmm.pp} style={{color:'rgb(7,7,159)',fontWeight:'bolder'}}>Create Account</p>
+        <input className={csmm.in} type="text" name='fname' value={fname} onChange={setvalue} required placeholder='First Name' />
+        <input className={csmm.in} type="text" name='lname' value={lname} onChange={setvalue} required placeholder='Last Name'/>
+        <input className={csmm.in} type="email" name='email' value={email} onChange={setvalue} required placeholder='Enter Your Email'/>
+        <input className={csmm.in} type="number"name='phone' value={phone} onChange={setvalue} required placeholder='Enter Your Contract Number'/>
+        <input className={csmm.in} type="password" name='password' value={password} onChange={setvalue} required placeholder='Enter Your Password' />
+        <input className={csmm.in} type="password" name='cpassword' value={cpassword} onChange={setvalue} required placeholder='Confirm Your Password' />
+        <button type='submit' className={csmm.bbtn}>Create Account</button>
         <p style={{textAlign:'center',color:'red'}}>{status}</p>
       </form>
-        </div>      
+      </div>      
     </div>
   )
 }

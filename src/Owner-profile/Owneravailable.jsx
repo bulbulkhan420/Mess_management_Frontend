@@ -45,6 +45,7 @@ export default function Owneravailable() {
        
          <Messcard info={item} />
          <span  onClick={(e)=>{
+          if(confirm('Are you sure to delete it?')){
             axios.delete(`${url}/deletroomlist/${item._id}`)
             .then((res)=>{
               if(res.data.ok){
@@ -52,6 +53,8 @@ export default function Owneravailable() {
                 alert('successfully deleted');
               }
             })
+          }
+            
           }} >
            <Buttin text={"Delete"}/>
          </span>

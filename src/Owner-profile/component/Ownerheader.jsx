@@ -22,9 +22,9 @@ export default function Ownerheader() {
          <li><Link to={`/owner/notice/${email}`}>Notice</Link></li>
          <li onClick={()=>{
           localStorage.removeItem('tokenowner');
-          navigate('/loginmess');
+          navigate('/');
          }}  style={{color:'aliceblue'}}>Sign Out</li>
-         <li style={{color:'aliceblue'}}>Help</li>
+         
         </ul>
         <img style={{height:'25px',width:'25px',float:'right',right:'2rem',position:'absolute'}} src={logo} alt="" />
       </nav>
