@@ -1,27 +1,29 @@
-import React from 'react'
+import React from "react";
 
-export default function Noticecard(props) {
-    let info=props.info.item;
+export default function NoticeCard(props) {
+  const info = props.info.item;
+
   return (
-    <div>
-      <div className="container"  style={{height:'50dvh',border:'1px solid black',borderRadius:'5px',position:'relative',overflow:'scroll',marginTop:'1rem',backgroundColor:'aliceblue'}}>
-        <div className="row">
-            <b className='col-4' style={{padding:'10px 0px 10px 0px'}}>{props.info.i+1}.</b>
-            <p className='col-8' style={{padding:'10px 0px 10px 0px',fontWeight:'bolder',color:'blue'}}>{info.mess_name}</p>
+    <div className="my-4">
+      {/* Main Card */}
+      <div className="bg-blue-50 rounded-md border border-gray-300 shadow-sm overflow-auto max-h-[50vh] p-4">
+        {/* Header: Number + Mess Name */}
+        <div className="flex items-center mb-2">
+          <span className="font-bold text-gray-700 mr-3">{props.info.i + 1}.</span>
+          <p className="font-semibold text-blue-600">{info.mess_name}</p>
+        </div>
 
+        {/* Post Content */}
+        <div className="mb-2">
+          <span className="font-bold text-gray-800 block mb-1">Post:</span>
+          <p className="text-gray-700">{info.mess_post}</p>
         </div>
-       
-        <div className="row">
-        <b className='col-12' style={{textAlign:'left'}}>Post:</b>
-        <p className='col-12' style={{textAlign:'left',fontFamily:'inherit'}}>{info.mess_post}</p>
-        </div>
-       
       </div>
-      <div className="container" style={{padding:'0px',margin:'0px'}}>
-      <div className="row" >
-       <p className='col-12' style={{fontSize:'8px',color:'green',textAlign:'left',margin:'0px'}}>{info.postdate}</p>
-       </div>
+
+      {/* Footer: Post Date */}
+      <div className="mt-1 px-4">
+        <p className="text-xs text-green-600 text-left">{info.postdate}</p>
       </div>
     </div>
-  )
+  );
 }

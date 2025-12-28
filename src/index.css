@@ -1,3 +1,6 @@
-.lk{
-    color: rgb(4, 27, 19);
+@import "tailwindcss";
+
+/* your custom css */
+.lk {
+  color: rgb(4, 27, 19);
 }
