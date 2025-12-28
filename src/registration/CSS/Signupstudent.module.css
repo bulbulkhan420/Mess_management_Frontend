@@ -88,7 +88,11 @@ button:hover{
 }
 
 .in,
+<<<<<<< HEAD
 .bbtn
+=======
+.btn
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
 {
     width: 80%;
     height: 40px;
@@ -97,18 +101,30 @@ button:hover{
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+<<<<<<< HEAD
     
     transition: all 0.3s ease-in-out;
 }
 
 .in:focus
+=======
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.in:focus,
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
 {
     border-color: #073083;
     box-shadow: 0 0 8px rgba(7, 7, 159, 0.2);
 }
 
 
+<<<<<<< HEAD
 .bbtn {
+=======
+.btn {
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
     /* width: 85%; */
     background-color: #073083;
     color: white;
@@ -117,19 +133,34 @@ button:hover{
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
+<<<<<<< HEAD
    
 }
 
 .bbtn:hover {
+=======
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
     background-color: #0056b3;
     box-shadow: 0px 4px 10px rgba(7, 7, 159, 0.3);
 }
 
+<<<<<<< HEAD
 .bbtn:active {
     background-color: #073083;
     box-shadow: none;
 }
 .bbtn{
+=======
+.btn:active {
+    background-color: #073083;
+    box-shadow: none;
+}
+.btn{
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
     width: 80%;
 }
 
@@ -139,7 +170,11 @@ button:hover{
         padding: 25px;
     }
 
+<<<<<<< HEAD
    .bbtn,.in{
+=======
+   .btn,.in{
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
         width: 100%;
     }
 
@@ -148,7 +183,11 @@ button:hover{
         height: 38px;
     }
 
+<<<<<<< HEAD
     .bbtn {
+=======
+    .btn {
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
         font-size: 16px;
         height: 40px;
     }
@@ -164,7 +203,11 @@ button:hover{
         padding: 20px;
     }
 
+<<<<<<< HEAD
    .bbtn,
+=======
+   .btn,
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
    .in{
         width: 100%;
         font-size: 14px;
@@ -174,7 +217,11 @@ button:hover{
         height: 35px;
     }
 
+<<<<<<< HEAD
     .bbtn {
+=======
+    .btn {
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
         height: 38px;
         font-size: 15px;
     }
@@ -182,4 +229,8 @@ button:hover{
     .pp {
         font-size: 20px;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95

@@ -54,11 +54,11 @@ export default function Studentpro() {
      <Studentheader/>
       <main className={cssp.maincontent} data-aos="zoom-in">
         <div className={cssp.profilepicture} >
-          <img src={info.image} alt="Profile" />
+          <img className={cssp.img} src={info.image} alt="Profile" />
         </div>
-        <hr style={{color:'black',border:'5px solid',width:'100%',maxWidth:'600px'}}/>
+        {/* <hr style={{color:'black',border:'5px solid',width:'100%',maxWidth:'600px'}}/> */}
         <div className={cssp.profiledetails}>
-          <h1>{info.name}</h1>
+          <h3 style={{textAlign:'center'}}>{info.name}</h3>
           <hr />
           <div className={cssp.detailitem}><strong>Email:</strong>{info.email}</div>
           <hr />
@@ -72,7 +72,7 @@ export default function Studentpro() {
           <hr />
           <div className={cssp.detailitem}><strong>Institution Name:</strong>{info.institution}</div>
           <hr />
-          <div style={{display:"flex",justifyContent:"right",width:"100%",marginLeft:"0px"}}><button style={{width:"70px",backgroundColor:'#333',}} onClick={show}>Update</button></div>
+          <div style={{display:"flex",justifyContent:"right",width:"100%",marginLeft:"0px"}}><button className={cssp.btn} style={{width:"70px",backgroundColor:'#333',}} onClick={show}>Update</button></div>
         </div>
         
       </main>

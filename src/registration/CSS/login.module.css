@@ -1,5 +1,82 @@
+<<<<<<< HEAD
  
 
+=======
+/* 
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+}
+.log-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    height: 50vh;
+    background-color: aliceblue;
+}
+.log-1 > input,button{
+    width: 70%;
+    line-height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    
+}
+.log-1 >button{
+    background-color: rgb(7, 7, 159);
+    color: aliceblue;
+    text-align: center;
+    padding: 3px;
+}
+.log-1 button:hover{
+    box-shadow: 3px 3px 3px rgb(7, 7, 159);
+}
+.log-1 input:hover{
+    box-shadow: 2px 2px 2px rgb(165, 163, 168);
+}
+.nodec{
+    text-decoration: none;
+    color:blue;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    height: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .log-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        width: 90%;
+        height: 50vh;
+        background-color: aliceblue;
+    }
+    .log-1 > input,button{
+        width: 80%;
+        line-height: 30px;
+        border-radius: 5px;
+        margin: 5px;
+        border: 1px solid black;
+        
+    } 
+} */
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
 
 
 /* Global Reset */
@@ -22,7 +99,11 @@
 }
 
 /* Form Container */
+<<<<<<< HEAD
 .log1 {
+=======
+.log_1 {
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,16 +117,26 @@
 }
 
 /* Input Fields & Button */
+<<<<<<< HEAD
 .log1 > .in
+=======
+.log_1 > input
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
  {
     width: 100%;
     line-height: 40px; /* Larger input fields */
     border-radius: 5px;
     margin: 10px 0;
     border: 1px solid #ccc;
+<<<<<<< HEAD
     padding-left: 5px;
     font-size: 16px;
    
+=======
+    padding: 10px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
    
 }
 
@@ -56,7 +147,11 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
+<<<<<<< HEAD
     height: 40px; /* Larger input fields */
+=======
+    transition: background-color 0.3s ease;
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
     width: 100%;
     
    
@@ -68,7 +163,15 @@
 }
 
 /* Input Hover and Focus Effect */
+<<<<<<< HEAD
 
+=======
+.log_1 input:focus,
+.log_1 input:hover {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Highlight on focus */
+}
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
 
 /* Links */
 .nodec {
@@ -83,7 +186,11 @@
 }
 
 /* Typography Adjustments */
+<<<<<<< HEAD
 .log1 .pp {
+=======
+.log_1 p {
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
     font-size: 18px;
     font-weight: bold;
     color: #333;
@@ -92,19 +199,35 @@
 
 /* Media Query for Mobile Responsiveness */
 @media only screen and (max-width: 600px) {
+<<<<<<< HEAD
     .log1 {
+=======
+    .log_1 {
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
         width: 100%;
         padding: 20px;
     }
 
+<<<<<<< HEAD
     .log1 > .in,
     .log1 > .btn {
+=======
+    .log_1 > input,
+    .log_1 > button {
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
         width: 100%;
         line-height: 35px;
         font-size: 16px;
     }
 
+<<<<<<< HEAD
     .log1 .pp {
         font-size: 16px;
     }
 }
+=======
+    .log_1 p {
+        font-size: 16px;
+    }
+}
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95

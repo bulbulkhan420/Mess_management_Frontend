@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './CSS/signupstudent.css'
 import csmm from "./CSS/Signupstudent.module.css"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';

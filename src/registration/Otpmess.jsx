@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./CSS/otp.css"
+import styles from "./CSS/Otp.module.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../Url';
@@ -37,8 +37,8 @@ export default function Otpmess() {
   }
   return (
     <div>
-       <div className="dismain">
-       <form className='dis' onSubmit={verifyemail}>
+       <div className={styles.dismain}>
+       <form className={styles.dis} onSubmit={verifyemail}>
             <p style={{textAlign:'center'}}>Enter Your OTP Sended in Your Email</p>
             <input type="text" value={otp} onChange={setotp} required minLength={5} placeholder='Enter Your OTP'/>
             <button type='submit'>Submit</button>

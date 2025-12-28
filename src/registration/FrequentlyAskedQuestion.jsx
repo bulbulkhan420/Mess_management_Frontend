@@ -87,4 +87,8 @@ export default function FAQ() {
       ))}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95

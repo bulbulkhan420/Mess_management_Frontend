@@ -31,7 +31,11 @@ const reviews = [
 const Review = () => {
   return (
     <div className={styles.reviews_section}>
+<<<<<<< HEAD
       <h2 className={styles.hh2}>User Reviews</h2>
+=======
+      <h2>User Reviews</h2>
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
       {reviews.map((review) => (
         <div key={review.id} className={styles.review}>
           <div className={styles.review_header}>
@@ -51,4 +55,8 @@ const Review = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Review;
+=======
+export default Review;
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95

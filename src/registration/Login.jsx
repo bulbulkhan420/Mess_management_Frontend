@@ -45,6 +45,7 @@ export default function Login() {
   return (
     <div>
         <div className={styles.log}>
+<<<<<<< HEAD
         <form className={styles.log1} onSubmit={check}>
         <p className={styles.pp} style={{color:'rgb(7,7,159)',fontWeight:'bolder'}}>Student Login</p>
         <input className={styles.in} type="email" value={email} name='email' onChange={valueset} placeholder='Enter Your Email'required/>
@@ -53,6 +54,16 @@ export default function Login() {
       
       <p style={{textAlign:'center',color:'blue'}}><NavLink to="/signupstudent" className={styles.nodec+' '+styles.pp}>Create new Account</NavLink></p>
       <p style={{textAlign:'center',color:'blue'}}><NavLink to="/forgetemail/student" className={styles.nodec+' '+styles.pp}>Forget Password?</NavLink></p>
+=======
+        <form className={styles.log_1} onSubmit={check}>
+        <p style={{color:'rgb(7,7,159)',fontWeight:'bolder'}}>Student Login</p>
+        <input type="email" value={email} name='email' onChange={valueset} placeholder='Enter Your Email'required/>
+      <input type="password" value={password} name='password' onChange={valueset} required placeholder='Enter Your password' />
+      <button type='submit' className={styles.btn}>Login</button>
+      
+      <p style={{textAlign:'center',color:'blue'}}><NavLink to="/signupstudent" className={styles.nodec}>Create new Account</NavLink></p>
+      <p style={{textAlign:'center',color:'blue'}}><NavLink to="/forgetemail/student" className={styles.nodec}>Forget Password?</NavLink></p>
+>>>>>>> 29b1658a361852b0d311d3f43a06eff02107fa95
         </form>
         </div>
         

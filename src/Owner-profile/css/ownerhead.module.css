@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0px;
     margin: 0px;
 }
@@ -63,4 +63,104 @@
     }
   
     
+  } */
+
+  /* Global Reset */
+
+  * {
+    padding: 0px;
+    margin: 0px;
   }
+  
+  .navbar {
+    background-color: #333;
+    padding: 20px 0;
+    /* Increased padding to make the header larger */
+    display: flex;
+    justify-content: center;
+    /* Centering the nav items */
+    align-items: center;
+    height: 100px;
+    /* Set a larger height for the header */
+    border: none;
+    font-size: 18px;
+    position: relative;
+    /* Allows absolute positioning of the logo */
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .navbar li {
+    margin: 0 30px;
+    /* Increased margin for better spacing between items */
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    /* Larger font size for better readability */
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ddd;
+    /* Subtle hover effect */
+  }
+  
+  .navtoggle {
+    display: none;
+    background: none;
+    border: none;
+    text-align: left;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+    /* Keep the toggle button to the left side */
+  }
+  
+  img {
+    height: 45px;
+    /* Slightly increase the logo size */
+    width: 45px;
+    position: absolute;
+    right: 20px;
+    /* Keep the logo at the right side */
+  }
+  
+  @media (max-width: 768px) {
+    .navtoggle {
+      display: block;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100px;
+      /* Adjusted for the new larger header height */
+      background-color: #333;
+      width: 100%;
+      padding: 10px 0;
+      z-index: 10;
+    }
+  
+    .navbar ul.navopen {
+      display: flex;
+      text-align: center;
+      transition: 0.5s;
+    }
+  
+    .navbar li {
+      margin: 10px 0;
+    }
+  }
+
